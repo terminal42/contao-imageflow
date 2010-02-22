@@ -8,20 +8,20 @@
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation, either
  * version 2.1 of the License, or (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General Public
  * License along with this program. If not, please visit the Free
  * Software Foundation website at http://www.gnu.org/licenses/.
  *
  * PHP version 5
- * @copyright  Andreas Schempp 2008
+ * @copyright  Andreas Schempp 2008-2010
  * @author     Andreas Schempp <andreas@schempp.ch>
- * @license    LGPL
+ * @license    http://opensource.org/licenses/lgpl-3.0.html
  * @version    $Id$
  */
 
@@ -31,29 +31,30 @@
  */
 class ContentImageFlow extends ContentElement
 {
+
 	/**
 	 * Template
 	 */
 	protected $strTemplate = 'ce_imageflow';
-	
-	
+
+
 	public function generate()
 	{
 		if (TL_MODE == 'BE')
 		{
 			$objTemplate = new BackendTemplate('be_wildcard');
 			$objTemplate->wildcard = '### IMAGEFLOW GALLERY ###';
-			
+
 			return $objTemplate->parse();
 		}
-		
+
 		$this->multiSRC = deserialize($this->multiSRC);
-		
+
 		// Use the home directory of the current user as file source
 		if ($this->useHomeDir && FE_USER_LOGGED_IN)
 		{
 			$this->import('FrontendUser', 'User');
-			
+
 			if ($this->User->assignDir && is_dir(TL_ROOT . '/' . $this->User->homeDir))
 			{
 				$this->multiSRC = array($this->User->homeDir);
@@ -61,19 +62,23 @@ class ContentImageFlow extends ContentElement
 		}
 
 		if (!is_array($this->multiSRC) || count($this->multiSRC) < 1)
-		{
 			return '';
-		}		
-		
+
 		return parent::generate();
 	}
-	
-	
+
+
 	protected function compile()
 	{
-		$GLOBALS['TL_CSS']['imageflow'] = 'plugins/imageflow/imageflow.css';
-		$GLOBALS['TL_JAVASCRIPT']['imageflow'] = 'plugins/imageflow/imageflow.js';
-		
+		if (version_compare(VERSION.'.'.BUILD, '2.7.6', '>'))
+		{
+			$GLOBALS['TL_CSS'][] = 'plugins/slimbox/css/slimbox.css';
+			$GLOBALS['TL_JAVASCRIPT'][] = 'plugins/slimbox/js/slimbox.js';
+		}
+
+		$GLOBALS['TL_CSS'][] = 'plugins/imageflow/imageflow.css';
+		$GLOBALS['TL_JAVASCRIPT'][] = 'plugins/imageflow/imageflow.js';
+
 		$images = array();
 		$auxDate = array();
 
@@ -171,7 +176,7 @@ class ContentImageFlow extends ContentElement
 		}
 
 		$images = array_values($images);
-		
+
 		$arrImages = array();
 
 		// Rows
@@ -191,7 +196,7 @@ class ContentImageFlow extends ContentElement
 				'src' => str_replace(' ', '%20', $image['src']),
 			);
 		}
-		
+
 		// Prepare reflection get parameters
 		$arrGetParameters = deserialize($this->ifGetParameters);
 		if (is_array($arrGetParameters) && strlen($arrGetParameters[0][0]))
@@ -205,12 +210,12 @@ class ContentImageFlow extends ContentElement
 				}
 			}
 		}
-		
+
 
 		$this->Template->divId = 'if'.$this->id;
 		$this->Template->lightboxId = 'lb' . $this->id;
 		$this->Template->images = $arrImages;
-		
+
 		$this->Template->preloadImages = $this->ifPreload ? 'true' : 'false';
 		$this->Template->reflections = $this->ifReflections ? 'true' : 'false';
 		$this->Template->reflectionP = $this->ifReflectionP;
@@ -226,7 +231,7 @@ class ContentImageFlow extends ContentElement
 		$this->Template->fullsize = $this->fullsize;
 		$this->Template->parameters = false;
 		$this->Template->slimbox = version_compare(VERSION, '2.7', '>=') ? true : false;
-		
+
 		// Pass ImageFlow parameters
 		$arrParameters = deserialize($this->ifParameters);
 		if (is_array($arrParameters) && strlen($arrParameters[0][0]))
@@ -235,3 +240,4 @@ class ContentImageFlow extends ContentElement
 		}
 	}
 }
+
