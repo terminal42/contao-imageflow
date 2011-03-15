@@ -173,6 +173,10 @@ class ContentImageFlow extends ContentElement
 				}
 				$images = $arrImages;
 				break;
+				
+			case 'random':
+				shuffle($images);
+				break;
 		}
 
 		$images = array_values($images);
