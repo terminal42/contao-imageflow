@@ -56,6 +56,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifReflectionP'] = array
 	'default'			=> '0.5',
 	'inputType'			=> 'select',
 	'options'			=> array('0.1', '0.2', '0.3', '0.4', '0.5', '0.6', '0.7', '0.8', '0.9', '1.0'),
+	'reference'			=> &$GLOBALS['TL_LANG']['tl_content']['ifReflectionP'],
 	'eval'				=> array('tl_class'=>'clr w50')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifReflectionPNG'] = array
@@ -105,7 +106,22 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifParameters'] = array
 	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['ifParameters'],
 	'exclude'			=> true,
 	'inputType'			=> 'multitextWizard',
-	'eval'				=> array('columns'=>2, 'labels'=>&$GLOBALS['TL_LANG']['tl_content']['ifGetParameters_ref'], 'tl_class'=>'clr long')
+	'eval'				=> array
+	(
+		'style'=>'width:100%;',
+		'columns' => array
+		(
+			array
+			(
+				'label' => &$GLOBALS['TL_LANG']['tl_content']['ifParameters']['key'],
+				'width' => '20%'
+			),
+			array
+			(
+				'label' => &$GLOBALS['TL_LANG']['tl_content']['ifParameters']['value']
+			)
+		)
+	)
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifLicense'] = array
 (
@@ -134,7 +150,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifConfigBlob'] = array
 		'slider',
 		'buttons',
 		'captions',
-		'opacity'		
+		'opacity'	
 	),
 	'reference'			=> &$GLOBALS['TL_LANG']['tl_content']['ifConfigBlob'],
 	'eval'				=> array('multiple'=>true)

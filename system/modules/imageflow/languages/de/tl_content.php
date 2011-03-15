@@ -30,7 +30,7 @@
  * Fields
  */
 $GLOBALS['TL_LANG']['tl_content']['ifReflections']		= array('Spiegelung aktivieren', '<a href="http://finnrudolph.de/ImageFlow/Examples#No_reflections" onclick="window.open(this.href); return false">Klicken Sie hier wenn die Bilder gespiegelt werden sollen.</a>');
-$GLOBALS['TL_LANG']['tl_content']['ifReflectionP']		= array('Höhe der Spiegelung', '<a href="http://finnrudolph.de/ImageFlow/Examples#Image_alignment" onclick="window.open(this.href); return false">Höhe der Spiegelung in % des Originalbildes (1.0 = 100%, 0 = 0%).</a>');
+$GLOBALS['TL_LANG']['tl_content']['ifReflectionP']		= array('Höhe der Spiegelung', '<a href="http://finnrudolph.de/ImageFlow/Examples#Image_alignment" onclick="window.open(this.href); return false">Höhe der Spiegelung in % des Originalbildes</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifReflectionPNG']	= array('PNG für Transparenz benutzen', '<a href="http://finnrudolph.de/ImageFlow/Examples#Transparent_reflections" onclick="window.open(this.href); return false">Verwendet reflect3.php anstelle von reflect2.php um PNG-Transparenz zu benutzen.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifImageFocusMax']	= array('Anzahl Bilder auf jeder Seite', '<a href="http://finnrudolph.de/ImageFlow/Examples#imageFocusMax" onclick="window.open(this.href); return false">Maximale Anzahl Bilder auf jeder Seite des fokussierten Bildes.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifStartID']			= array('Startbild', '<a href="http://finnrudolph.de/ImageFlow/Examples#startID" onclick="window.open(this.href); return false">Beim starten zu diesem Bild gleiten.</a>');
@@ -52,11 +52,22 @@ $GLOBALS['TL_LANG']['tl_content']['ifReflections_legend']	= 'Bildspiegelung';
 /**
  * References
  */
-$GLOBALS['TL_LANG']['tl_content']['ifGetParameters_ref']				= array('Schlüssel', 'Wert');
+$GLOBALS['TL_LANG']['tl_content']['ifParameters']['key']				= 'Schlüssel';
+$GLOBALS['TL_LANG']['tl_content']['ifParameters']['value']				= 'Wert';
 $GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['preloadImages']		= 'Bilder vorladen';
 $GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['startAnimation']		= 'Start-Animation zeigen';
 $GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['slider']				= 'Schieber anzeigen';
 $GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['buttons']			= 'Buttons anzeigen';
 $GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['captions']			= 'Bildunterschriften anzeigen';
 $GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['opacity']			= 'Bilder transparent zeigen';
+$GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.1']				= '10%';
+$GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.2']				= '20%';
+$GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.3']				= '30%';
+$GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.4']				= '40%';
+$GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.5']				= '50%';
+$GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.6']				= '60%';
+$GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.7']				= '70%';
+$GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.8']				= '80%';
+$GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.9']				= '90%';
+$GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['1.0']				= '100%';
 
