@@ -216,6 +216,11 @@ class ContentImageFlow extends ContentElement
 		$this->Template->reflectPath = $this->Environment->base . 'plugins/imageflow/';
 		$this->Template->animationSpeed = is_numeric($this->ifAnimationSpeed) ? $this->ifAnimationSpeed : 50;
 		
+		// slideshow
+		$this->Template->slideshow = ($this->ifAddSlideShow) ? 'true' : 'false';
+		$this->Template->slideshowSpeed = $this->ifSlideShowSpeed;
+		$this->Template->slideshowAutoplay = ($this->ifSlideShowAutoPlay) ? 'true' : 'false';
+		
 
 		// Pass ImageFlow parameters
 		$arrParameters = array();
@@ -243,11 +248,25 @@ class ContentImageFlow extends ContentElement
 		
 		$arrConfigBlob = deserialize($this->ifConfigBlob);
 		
-		if(is_array($arrConfigBlob) && count($arrConfigBlob))
+		// make sure $arrConfigBlob is not empty
+		if(!(is_array($arrConfigBlob) && count($arrConfigBlob)))
 		{
-			foreach($arrConfigBlob as $v)
+			$arrConfigBlob[] = '';
+		}
+		
+		// we need to set the values that are false here too
+		$this->loadDataContainer('tl_content');
+		$arrAllConfigValues = $GLOBALS['TL_DCA']['tl_content']['fields']['ifConfigBlob']['options'];
+		
+		foreach($arrAllConfigValues as $conf)
+		{
+			if(in_array($conf, $arrConfigBlob))
 			{
-				$arrParameters[] = array($v, 1);
+				$arrParameters[] = array($conf, 1);
+			}
+			else
+			{
+				$arrParameters[] = array($conf, 'false');
 			}
 		}
 		

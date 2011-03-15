@@ -23,6 +23,9 @@
 			reflectionPNG: <?php echo $this->reflectionPNG; ?>,
 			reflectionGET: '<?php echo $this->reflectionGET; ?>',
 			imageFocusMax: <?php echo $this->imageFocusMax; ?>,
+			slideshow: <?php echo $this->slideshow; ?>,
+			slideshowSpeed: <?php echo $this->slideshowSpeed; ?>,
+			slideshowAutoplay: <?php echo $this->slideshowAutoplay; ?>,
 			startID: <?php echo $this->startID; ?>,
 			animationSpeed: <?php echo $this->animationSpeed; ?>,
 			<?php if ($this->parameters): foreach( $this->parameters as $arrParameter): ?>

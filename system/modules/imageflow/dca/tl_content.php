@@ -34,10 +34,12 @@ $GLOBALS['TL_CSS'][] = 'system/modules/imageflow/html/style_be.css';
  * Add palette
  */
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'ifReflections';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['imageflow'] = '{type_legend},type,headline;ifLicense;{source_legend},multiSRC,useHomeDir;{image_legend},sortBy,fullsize,ifImageFocusMax,ifStartID,ifAnimationSpeed,ifConfigBlob,ifParameters;{ifSettings_legend},ifPreload,ifStartAnimation,ifSlider,ifButtons,ifCaptions,ifOpacity;{ifReflections_legend},ifReflections;{protected_legend:hide},protected;{expert_legend:hide},guests,align,space,cssID';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'ifAddSlideShow';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['imageflow'] = '{type_legend},type,headline;ifLicense;{source_legend},multiSRC,useHomeDir;{image_legend},sortBy,fullsize,ifImageFocusMax,ifStartID,ifAnimationSpeed,ifConfigBlob,ifParameters;{ifSettings_legend},ifPreload,ifStartAnimation,ifSlider,ifButtons,ifCaptions,ifOpacity;{ifReflections_legend},ifReflections;{ifSlideShow_legend},ifAddSlideShow;{protected_legend:hide},protected;{expert_legend:hide},guests,align,space,cssID';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['ifReflections_none'] = '';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['ifReflections_png'] = 'ifReflectionP';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['ifReflections_jpeg'] = 'ifReflectionP,ifBgColor';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['ifAddSlideShow'] = 'ifSlideShowSpeed,ifSlideShowAutoPlay';
 
 
 /**
@@ -141,8 +143,31 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifConfigBlob'] = array
 		'buttons',
 		'captions',
 		'opacity',
-		'circular'	
+		'circular',
+		'glideToStartID'
 	),
 	'reference'			=> &$GLOBALS['TL_LANG']['tl_content']['ifConfigBlob'],
 	'eval'				=> array('multiple'=>true)
+);
+$GLOBALS['TL_DCA']['tl_content']['fields']['ifAddSlideShow'] = array
+(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['ifAddSlideShow'],
+	'exclude'			=> true,
+	'inputType'			=> 'checkbox',
+	'eval'				=> array('submitOnChange'=>true)
+);
+$GLOBALS['TL_DCA']['tl_content']['fields']['ifSlideShowSpeed'] = array
+(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['ifSlideShowSpeed'],
+	'exclude'			=> true,
+	'default'			=> '1500',
+	'inputType'			=> 'text',
+	'eval'				=> array('regex'=>'digit', 'maxlength'=>5, 'tl_class'=>'w50')
+);
+$GLOBALS['TL_DCA']['tl_content']['fields']['ifSlideShowAutoPlay'] = array
+(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['ifSlideShowAutoPlay'],
+	'exclude'			=> true,
+	'inputType'			=> 'checkbox',
+	'eval'				=> array('tl_class'=>'w50 m12')
 );
