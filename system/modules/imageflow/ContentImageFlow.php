@@ -235,12 +235,13 @@ class ContentImageFlow extends ContentElement
 				
 				if($v[0] == 'reflectionGET')
 				{
-					$strGetParameters = $v;
+					$strGetParameters = $v[1];
+					unset($arrParameters[$k]);
 				}
 			}
 		}
-		
-		$this->Template->reflectionGET = '&amp;bgc='.(strlen($this->ifBgColor) ? $this->ifBgColor : '000000') . $strGetParameters;	
+
+		$this->Template->reflectionGET = '&amp;bgc='.(strlen($this->ifBgColor) ? $this->ifBgColor : '000000') . specialchars($strGetParameters);	
 		
 		$arrConfigBlob = deserialize($this->ifConfigBlob);
 		
