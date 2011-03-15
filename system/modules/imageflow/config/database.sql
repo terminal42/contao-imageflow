@@ -12,9 +12,8 @@
 -- 
 
 CREATE TABLE `tl_content` (
-  `ifReflections` char(1) NOT NULL default '1',
+  `ifReflections` varchar(4) NOT NULL default 'none',
   `ifReflectionP` varchar(3) NOT NULL default '0.5',
-  `ifReflectionPNG` char(1) NOT NULL default '',
   `ifImageFocusMax` int(1) NOT NULL default '4',
   `ifStartID` int(3) NOT NULL default '1',
   `ifBgColor` varchar(6) NOT NULL default '',

@@ -29,9 +29,8 @@
 /**
  * Fields
  */
-$GLOBALS['TL_LANG']['tl_content']['ifReflections']		= array('Spiegelung aktivieren', '<a href="http://finnrudolph.de/ImageFlow/Examples#No_reflections" onclick="window.open(this.href); return false">Klicken Sie hier wenn die Bilder gespiegelt werden sollen.</a>');
+$GLOBALS['TL_LANG']['tl_content']['ifReflections']		= array('Spiegelung', '<a href="http://finnrudolph.de/ImageFlow/Examples#No_reflections" onclick="window.open(this.href); return false">Wählen Sie aus, wie die Bilder gespiegelt werden sollen.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifReflectionP']		= array('Höhe der Spiegelung', '<a href="http://finnrudolph.de/ImageFlow/Examples#Image_alignment" onclick="window.open(this.href); return false">Höhe der Spiegelung in % des Originalbildes</a>');
-$GLOBALS['TL_LANG']['tl_content']['ifReflectionPNG']	= array('PNG für Transparenz benutzen', '<a href="http://finnrudolph.de/ImageFlow/Examples#Transparent_reflections" onclick="window.open(this.href); return false">Verwendet reflect3.php anstelle von reflect2.php um PNG-Transparenz zu benutzen.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifImageFocusMax']	= array('Anzahl Bilder auf jeder Seite', '<a href="http://finnrudolph.de/ImageFlow/Examples#imageFocusMax" onclick="window.open(this.href); return false">Maximale Anzahl Bilder auf jeder Seite des fokussierten Bildes.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifStartID']			= array('Startbild', '<a href="http://finnrudolph.de/ImageFlow/Examples#startID" onclick="window.open(this.href); return false">Beim starten zu diesem Bild gleiten.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifBgColor']			= array('Hintergrundfarbe der Spiegelung', 'Wählen Sie die Hintergrundfarbe für die Spiegelung entsprechend der Website für beste Resultate.');
@@ -69,4 +68,6 @@ $GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.7']				= '70%';
 $GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.8']				= '80%';
 $GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.9']				= '90%';
 $GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['1.0']				= '100%';
-
+$GLOBALS['TL_LANG']['tl_content']['ifReflections']['none']				= 'keine Spiegelung';
+$GLOBALS['TL_LANG']['tl_content']['ifReflections']['png']				= 'PNG-Spiegelung';
+$GLOBALS['TL_LANG']['tl_content']['ifReflections']['jpeg']				= 'JPEG-Spiegelung';

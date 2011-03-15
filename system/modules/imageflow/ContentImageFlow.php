@@ -205,16 +205,14 @@ class ContentImageFlow extends ContentElement
 		$this->Template->lightboxId = 'lb' . $this->id;
 		$this->Template->images = $arrImages;
 
-		$this->Template->reflections = $this->ifReflections ? 'true' : 'false';
+		$this->Template->reflections = ($this->ifReflections != 'none') ? 'true' : 'false';
 		$this->Template->reflectionP = $this->ifReflectionP;
-		$this->Template->reflectionPNG = $this->ifReflectionPNG ? 'true' : 'false';
+		$this->Template->reflectionPNG = ($this->ifReflections == 'png') ? 'true' : 'false';
 		$this->Template->imageFocusMax = $this->ifImageFocusMax;
 		$this->Template->startID = $this->ifStartID;
 		$this->Template->fullsize = $this->fullsize;
 		$this->Template->parameters = false;
 		$this->Template->slimbox = version_compare(VERSION, '2.7', '>=') ? true : false;
-		
-		// version 1.3.0
 		$this->Template->reflectPath = $this->Environment->base . 'plugins/imageflow/';
 		$this->Template->animationSpeed = is_numeric($this->ifAnimationSpeed) ? $this->ifAnimationSpeed : 50;
 		

@@ -35,7 +35,9 @@ $GLOBALS['TL_CSS'][] = 'system/modules/imageflow/html/style_be.css';
  */
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'ifReflections';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['imageflow'] = '{type_legend},type,headline;ifLicense;{source_legend},multiSRC,useHomeDir;{image_legend},sortBy,fullsize,ifImageFocusMax,ifStartID,ifAnimationSpeed,ifConfigBlob,ifParameters;{ifSettings_legend},ifPreload,ifStartAnimation,ifSlider,ifButtons,ifCaptions,ifOpacity;{ifReflections_legend},ifReflections;{protected_legend:hide},protected;{expert_legend:hide},guests,align,space,cssID';
-$GLOBALS['TL_DCA']['tl_content']['subpalettes']['ifReflections'] = 'ifReflectionPNG,ifReflectionP,ifBgColor';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['ifReflections_none'] = '';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['ifReflections_png'] = 'ifReflectionP';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['ifReflections_jpeg'] = 'ifReflectionP,ifBgColor';
 
 
 /**
@@ -45,9 +47,11 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifReflections'] = array
 (
 	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['ifReflections'],
 	'exclude'			=> true,
-	'default'			=> '1',
-	'inputType'			=> 'checkbox',
-	'eval'				=> array('submitOnChange'=>true, 'tl_class'=>'w50')
+	'default'			=> 'none',
+	'inputType'			=> 'radio',
+	'options'			=> array('none','png','jpeg'),
+	'reference'			=> &$GLOBALS['TL_LANG']['tl_content']['ifReflections'],
+	'eval'				=> array('submitOnChange'=>true, 'tl_class'=>'clr')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifReflectionP'] = array
 (
@@ -58,13 +62,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifReflectionP'] = array
 	'options'			=> array('0.1', '0.2', '0.3', '0.4', '0.5', '0.6', '0.7', '0.8', '0.9', '1.0'),
 	'reference'			=> &$GLOBALS['TL_LANG']['tl_content']['ifReflectionP'],
 	'eval'				=> array('tl_class'=>'clr w50')
-);
-$GLOBALS['TL_DCA']['tl_content']['fields']['ifReflectionPNG'] = array
-(
-	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['ifReflectionPNG'],
-	'exclude'			=> true,
-	'inputType'			=> 'checkbox',
-	'eval'				=> array('tl_class'=>'long')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifImageFocusMax'] = array
 (
