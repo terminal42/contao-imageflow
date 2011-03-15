@@ -38,19 +38,19 @@
 		width:1%;
 	}
 	.imageflow .navigation{
-		z-index:10000;
+		z-index:996;
 	}
 	.imageflow .caption {
 		font-weight:bold;
 		position:relative; 
 		text-align:center;
-		z-index:10001;
+		z-index:997;
 	}
 	.imageflow .scrollbar {
 		border-bottom:1px solid #b3b3b3;
 		position:relative; 
 		visibility:hidden;
-		z-index:10002;
+		z-index:998;
 		height:1px;
 	}
 	.imageflow .slider {
@@ -59,7 +59,7 @@
 		margin:-6px 0 0 -7px;
 		position:absolute;
 		width:14px;
-		z-index:10003;
+		z-index:999;
 	}
 	.imageflow .slideshow {
 		cursor:pointer;
@@ -67,7 +67,7 @@
 		margin:20px 0 0 20px;
 		position:absolute;
 		width:14px;
-		z-index:10003;
+		z-index:999;
 	}
 	.imageflow .slideshow.pause {
 		background:url(button_pause.png) no-repeat;
