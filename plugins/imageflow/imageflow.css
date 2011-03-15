@@ -1,6 +1,6 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
-/* ImageFlow Settings - CSS 2.1
+/* ImageFlow Settings
 ==================================== */
 @media screen, projection {
 	.imageflow {
@@ -38,29 +38,42 @@
 		width:1%;
 	}
 	.imageflow .navigation{
-		z-index:996;
+		z-index:10000;
 	}
 	.imageflow .caption {
 		font-weight:bold;
 		position:relative; 
 		text-align:center;
-		z-index:997;
+		z-index:10001;
 	}
 	.imageflow .scrollbar {
 		border-bottom:1px solid #b3b3b3;
 		position:relative; 
 		visibility:hidden;
-		z-index:998;
+		z-index:10002;
 		height:1px;
 	}
 	.imageflow .slider {
-		background-image:url(slider.png);
-		background-repeat:no-repeat;
+		background:url(slider.png) no-repeat;
 		height:14px;
 		margin:-6px 0 0 -7px;
 		position:absolute;
 		width:14px;
-		z-index:999;
+		z-index:10003;
+	}
+	.imageflow .slideshow {
+		cursor:pointer;
+		height:14px;
+		margin:20px 0 0 20px;
+		position:absolute;
+		width:14px;
+		z-index:10003;
+	}
+	.imageflow .slideshow.pause {
+		background:url(button_pause.png) no-repeat;
+	}
+	.imageflow .slideshow.play {
+		background:url(button_play.png) no-repeat;
 	}
 	.imageflow .images {
 		overflow:hidden;

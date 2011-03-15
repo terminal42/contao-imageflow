@@ -44,6 +44,7 @@ $GLOBALS['TL_LANG']['tl_content']['ifBgColor']			= array('Hintergrundfarbe der S
 $GLOBALS['TL_LANG']['tl_content']['ifGetParameters']	= array('Parameter für Spiegelungs-Script', '<a href="http://finnrudolph.de/ImageFlow/Examples#Reflection_background_color" onclick="window.open(this.href); return false">Sie können dem Spiegelungs-Script zusätzliche Parameter übergeben.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifParameters']		= array('Parameter für ImageFlow-Script', '<a href="http://finnrudolph.de/ImageFlow/Documentation" onclick="window.open(this.href); return false;">Sie können ImageFlow zusätzliche Parameter übergeben.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifLicense']			= array('ImageFlow Lizenz', '');
+$GLOBALS['TL_LANG']['tl_content']['ifAnimationSpeed']	= array('Animations-Geschwindigkeit', 'Geben Sie die gewünschte Animationszeit in ms ein.');
 
 
 /**

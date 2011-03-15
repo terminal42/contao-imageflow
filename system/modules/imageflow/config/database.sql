@@ -27,4 +27,5 @@ CREATE TABLE `tl_content` (
   `ifGetParameters` blob NULL,
   `ifParameters` blob NULL,
   `ifLicense` char(1) NOT NULL default '',
+  `ifAnimationSpeed` int(3) NOT NULL default '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

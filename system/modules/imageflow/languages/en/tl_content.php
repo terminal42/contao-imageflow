@@ -43,6 +43,7 @@ $GLOBALS['TL_LANG']['tl_content']['ifBgColor']			= array('Reflection background 
 $GLOBALS['TL_LANG']['tl_content']['ifGetParameters']	= array('Reflection script parameters', 'You can add additional parameters to the reflection script. <a href="http://finnrudolph.de/ImageFlow/Examples#Reflection_background_color">See documentation for more info</a>.');
 $GLOBALS['TL_LANG']['tl_content']['ifParameters']		= array('Parameters for ImageFlow-Script', 'You can pass additional parameters to the ImageFlow script. <a href="http://finnrudolph.de/ImageFlow/Documentation" onclick="window.open(this.href); return false;">See documentation for more info.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifLicense']			= array('ImageFlow license', '');
+$GLOBALS['TL_LANG']['tl_content']['ifAnimationSpeed']	= array('Animation speed', 'Enter the desired animation speed in ms.');
 
 
 /**

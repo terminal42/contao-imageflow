@@ -34,7 +34,7 @@ $GLOBALS['TL_CSS'][] = 'system/modules/imageflow/html/style_be.css';
  * Add palette
  */
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'ifReflections';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['imageflow'] = '{type_legend},type,headline;ifLicense;{source_legend},multiSRC,sortBy,useHomeDir;{ifSettings_legend},ifImageFocusMax,ifStartID,ifPreload,ifStartAnimation,ifSlider,ifButtons,ifCaptions,ifOpacity,fullsize,ifParameters;{ifReflections_legend},ifReflections;{protected_legend:hide},protected;{expert_legend:hide},guests,align,space,cssID';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['imageflow'] = '{type_legend},type,headline;ifLicense;{source_legend},multiSRC,sortBy,useHomeDir;{ifSettings_legend},ifImageFocusMax,ifStartID,ifPreload,ifStartAnimation,ifSlider,ifButtons,ifCaptions,ifOpacity,fullsize,ifAnimationSpeed,ifParameters;{ifReflections_legend},ifReflections;{protected_legend:hide},protected;{expert_legend:hide},guests,align,space,cssID';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['ifReflections'] = 'ifReflectionPNG,ifReflectionP,ifBgColor,ifGetParameters';
 
 
@@ -47,7 +47,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifPreload'] = array
 	'exclude'			=> true,
 	'default'			=> '1',
 	'inputType'			=> 'checkbox',
-	'eval'				=> array('tl_class'=>'w50'),
+	'eval'				=> array('tl_class'=>'w50')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifReflections'] = array
 (
@@ -55,7 +55,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifReflections'] = array
 	'exclude'			=> true,
 	'default'			=> '1',
 	'inputType'			=> 'checkbox',
-	'eval'				=> array('submitOnChange'=>true, 'tl_class'=>'w50'),
+	'eval'				=> array('submitOnChange'=>true, 'tl_class'=>'w50')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifReflectionP'] = array
 (
@@ -64,14 +64,14 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifReflectionP'] = array
 	'default'			=> '0.5',
 	'inputType'			=> 'select',
 	'options'			=> array('0.1', '0.2', '0.3', '0.4', '0.5', '0.6', '0.7', '0.8', '0.9', '1.0'),
-	'eval'				=> array('tl_class'=>'clr w50'),
+	'eval'				=> array('tl_class'=>'clr w50')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifReflectionPNG'] = array
 (
 	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['ifReflectionPNG'],
 	'exclude'			=> true,
 	'inputType'			=> 'checkbox',
-	'eval'				=> array('tl_class'=>'long'),
+	'eval'				=> array('tl_class'=>'long')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifImageFocusMax'] = array
 (
@@ -80,7 +80,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifImageFocusMax'] = array
 	'default'			=> '4',
 	'inputType'			=> 'select',
 	'options'			=> array('1', '2', '3', '4', '5', '6'),
-	'eval'				=> array('tl_class'=>'w50'),
+	'eval'				=> array('tl_class'=>'w50')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifStartID'] = array
 (
@@ -88,14 +88,14 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifStartID'] = array
 	'exclude'			=> true,
 	'default'			=> '1',
 	'inputType'			=> 'text',
-	'eval'				=> array('regex'=>'digit', 'maxlength'=>3, 'tl_class'=>'w50'),
+	'eval'				=> array('regex'=>'digit', 'maxlength'=>3, 'tl_class'=>'w50')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifStartAnimation'] = array
 (
 	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['ifStartAnimation'],
 	'exclude'			=> true,
 	'inputType'			=> 'checkbox',
-	'eval'				=> array('tl_class'=>'w50'),
+	'eval'				=> array('tl_class'=>'w50')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifSlider'] = array
 (
@@ -103,7 +103,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifSlider'] = array
 	'exclude'			=> true,
 	'default'			=> '1',
 	'inputType'			=> 'checkbox',
-	'eval'				=> array('tl_class'=>'w50'),
+	'eval'				=> array('tl_class'=>'w50')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifButtons'] = array
 (
@@ -111,7 +111,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifButtons'] = array
 	'exclude'			=> true,
 	'default'			=> '1',
 	'inputType'			=> 'checkbox',
-	'eval'				=> array('tl_class'=>'w50'),
+	'eval'				=> array('tl_class'=>'w50')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifCaptions'] = array
 (
@@ -119,14 +119,14 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifCaptions'] = array
 	'exclude'			=> true,
 	'default'			=> '1',
 	'inputType'			=> 'checkbox',
-	'eval'				=> array('tl_class'=>'w50'),
+	'eval'				=> array('tl_class'=>'w50')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifOpacity'] = array
 (
 	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['ifOpacity'],
 	'exclude'			=> true,
 	'inputType'			=> 'checkbox',
-	'eval'				=> array('tl_class'=>'w50'),
+	'eval'				=> array('tl_class'=>'w50')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifBgColor'] = array
 (
@@ -144,19 +144,27 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifGetParameters'] = array
 	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['ifGetParameters'],
 	'exclude'			=> true,
 	'inputType'			=> 'multitextWizard',
-	'eval'				=> array('columns'=>2, 'labels'=>&$GLOBALS['TL_LANG']['tl_content']['ifGetParameters_ref'], 'tl_class'=>'clr long'),
+	'eval'				=> array('columns'=>2, 'labels'=>&$GLOBALS['TL_LANG']['tl_content']['ifGetParameters_ref'], 'tl_class'=>'clr long')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifParameters'] = array
 (
 	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['ifParameters'],
 	'exclude'			=> true,
 	'inputType'			=> 'multitextWizard',
-	'eval'				=> array('columns'=>2, 'labels'=>&$GLOBALS['TL_LANG']['tl_content']['ifGetParameters_ref'], 'tl_class'=>'clr long'),
+	'eval'				=> array('columns'=>2, 'labels'=>&$GLOBALS['TL_LANG']['tl_content']['ifGetParameters_ref'], 'tl_class'=>'clr long')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifLicense'] = array
 (
 	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['ifLicense'],
 	'exclude'			=> true,
 	'inputType'			=> 'license',
-	'eval'				=> array('submitOnChange'=>true, 'license'=>&$GLOBALS['TL_LANG']['MSC']['imageflow_license'], 'doNotShow'=>true, 'doNotCopy'=>true, 'tl_class'=>'long'),
+	'eval'				=> array('submitOnChange'=>true, 'license'=>&$GLOBALS['TL_LANG']['MSC']['imageflow_license'], 'doNotShow'=>true, 'doNotCopy'=>true, 'tl_class'=>'long')
+);
+$GLOBALS['TL_DCA']['tl_content']['fields']['ifAnimationSpeed'] = array
+(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['ifAnimationSpeed'],
+	'exclude'			=> true,
+	'default'			=> '50',
+	'inputType'			=> 'text',
+	'eval'				=> array('regex'=>'digit', 'maxlength'=>3,  'tl_class'=>'w50')
 );

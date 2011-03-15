@@ -231,6 +231,11 @@ class ContentImageFlow extends ContentElement
 		$this->Template->fullsize = $this->fullsize;
 		$this->Template->parameters = false;
 		$this->Template->slimbox = version_compare(VERSION, '2.7', '>=') ? true : false;
+		
+		// version 1.3.0
+		$this->Template->reflectPath = $this->Environment->base . 'plugins/imageflow/';
+		$this->Template->animationSpeed = is_numeric($this->ifAnimationSpeed) ? $this->ifAnimationSpeed : 50;
+		
 
 		// Pass ImageFlow parameters
 		$arrParameters = deserialize($this->ifParameters);
