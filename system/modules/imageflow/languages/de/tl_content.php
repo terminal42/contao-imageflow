@@ -35,7 +35,6 @@ $GLOBALS['TL_LANG']['tl_content']['ifReflectionPNG']	= array('PNG für Transpare
 $GLOBALS['TL_LANG']['tl_content']['ifImageFocusMax']	= array('Anzahl Bilder auf jeder Seite', '<a href="http://finnrudolph.de/ImageFlow/Examples#imageFocusMax" onclick="window.open(this.href); return false">Maximale Anzahl Bilder auf jeder Seite des fokussierten Bildes.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifStartID']			= array('Startbild', '<a href="http://finnrudolph.de/ImageFlow/Examples#startID" onclick="window.open(this.href); return false">Beim starten zu diesem Bild gleiten.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifBgColor']			= array('Hintergrundfarbe der Spiegelung', 'Wählen Sie die Hintergrundfarbe für die Spiegelung entsprechend der Website für beste Resultate.');
-$GLOBALS['TL_LANG']['tl_content']['ifGetParameters']	= array('Parameter für Spiegelungs-Script', '<a href="http://finnrudolph.de/ImageFlow/Examples#Reflection_background_color" onclick="window.open(this.href); return false">Sie können dem Spiegelungs-Script zusätzliche Parameter übergeben.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifParameters']		= array('Parameter für ImageFlow-Script', '<a href="http://finnrudolph.de/ImageFlow/Documentation" onclick="window.open(this.href); return false;">Sie können ImageFlow zusätzliche Parameter übergeben.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifLicense']			= array('ImageFlow Lizenz', '');
 $GLOBALS['TL_LANG']['tl_content']['ifAnimationSpeed']	= array('Animations-Geschwindigkeit', 'Geben Sie die gewünschte Animationszeit in ms ein.');

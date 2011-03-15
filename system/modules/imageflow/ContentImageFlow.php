@@ -201,21 +201,6 @@ class ContentImageFlow extends ContentElement
 			);
 		}
 
-		// Prepare reflection get parameters
-		$arrGetParameters = deserialize($this->ifGetParameters);
-		if (is_array($arrGetParameters) && strlen($arrGetParameters[0][0]))
-		{
-			$strGetParameters = '';
-			foreach( $arrGetParameters as $arrParameter )
-			{
-				if (strlen($arrParameter[0]) && strlen($arrParameter[1]))
-				{
-					$strGetParameters .= '&amp;' . $arrParameter[0] . '=' . $arrParameter[1];
-				}
-			}
-		}
-
-
 		$this->Template->divId = 'if'.$this->id;
 		$this->Template->lightboxId = 'lb' . $this->id;
 		$this->Template->images = $arrImages;
@@ -223,7 +208,6 @@ class ContentImageFlow extends ContentElement
 		$this->Template->reflections = $this->ifReflections ? 'true' : 'false';
 		$this->Template->reflectionP = $this->ifReflectionP;
 		$this->Template->reflectionPNG = $this->ifReflectionPNG ? 'true' : 'false';
-		$this->Template->reflectionGET = '&amp;bgc='.(strlen($this->ifBgColor) ? $this->ifBgColor : '000000').$strGetParameters;
 		$this->Template->imageFocusMax = $this->ifImageFocusMax;
 		$this->Template->startID = $this->ifStartID;
 		$this->Template->fullsize = $this->fullsize;
@@ -237,6 +221,7 @@ class ContentImageFlow extends ContentElement
 
 		// Pass ImageFlow parameters
 		$arrParameters = array();
+		$strGetParameters = '';
 		$arrParameters = deserialize($this->ifParameters);
 
 		if(is_array($arrParameters) && count($arrParameters))
@@ -247,8 +232,15 @@ class ContentImageFlow extends ContentElement
 				{
 					unset($arrParameters[$k]);
 				}
+				
+				if($v[0] == 'reflectionGET')
+				{
+					$strGetParameters = $v;
+				}
 			}
-		}		
+		}
+		
+		$this->Template->reflectionGET = '&amp;bgc='.(strlen($this->ifBgColor) ? $this->ifBgColor : '000000') . $strGetParameters;	
 		
 		$arrConfigBlob = deserialize($this->ifConfigBlob);
 		

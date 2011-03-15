@@ -35,7 +35,7 @@ $GLOBALS['TL_CSS'][] = 'system/modules/imageflow/html/style_be.css';
  */
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'ifReflections';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['imageflow'] = '{type_legend},type,headline;ifLicense;{source_legend},multiSRC,useHomeDir;{image_legend},sortBy,fullsize,ifImageFocusMax,ifStartID,ifAnimationSpeed,ifConfigBlob,ifParameters;{ifSettings_legend},ifPreload,ifStartAnimation,ifSlider,ifButtons,ifCaptions,ifOpacity;{ifReflections_legend},ifReflections;{protected_legend:hide},protected;{expert_legend:hide},guests,align,space,cssID';
-$GLOBALS['TL_DCA']['tl_content']['subpalettes']['ifReflections'] = 'ifReflectionPNG,ifReflectionP,ifBgColor,ifGetParameters';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['ifReflections'] = 'ifReflectionPNG,ifReflectionP,ifBgColor';
 
 
 /**
@@ -93,13 +93,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifBgColor'] = array
 	(
 		array('tl_style', 'colorPicker')
 	)
-);
-$GLOBALS['TL_DCA']['tl_content']['fields']['ifGetParameters'] = array
-(
-	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['ifGetParameters'],
-	'exclude'			=> true,
-	'inputType'			=> 'multitextWizard',
-	'eval'				=> array('columns'=>2, 'labels'=>&$GLOBALS['TL_LANG']['tl_content']['ifGetParameters_ref'], 'tl_class'=>'clr long')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['ifParameters'] = array
 (
