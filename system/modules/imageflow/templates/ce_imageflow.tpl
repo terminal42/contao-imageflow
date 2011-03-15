@@ -18,21 +18,15 @@
 		new ImageFlow().init({ 
 			ImageFlowID: '<?php echo $this->divId; ?>',
 			reflectPath: '<?php echo $this->reflectPath; ?>',
-			preloadImages: <?php echo $this->preloadImages; ?>,
 			reflections: <?php echo $this->reflections; ?>,
 			reflectionP: <?php echo $this->reflectionP; ?>,
 			reflectionPNG: <?php echo $this->reflectionPNG; ?>,
 			reflectionGET: '<?php echo $this->reflectionGET; ?>',
 			imageFocusMax: <?php echo $this->imageFocusMax; ?>,
 			startID: <?php echo $this->startID; ?>,
-			startAnimation: <?php echo $this->startAnimation; ?>,
-			slider: <?php echo $this->slider; ?>,
-			buttons: <?php echo $this->buttons; ?>,
-			captions: <?php echo $this->captions; ?>,
-			opacity: <?php echo $this->opacity; ?>,
 			animationSpeed: <?php echo $this->animationSpeed; ?>,
 			<?php if ($this->parameters): foreach( $this->parameters as $arrParameter): ?>
-			<?php echo $arrParameter[0] . ': ' . $arrParameter[1] . ",\n"; ?>
+			<?php echo $arrParameter[0] . ': ' . (($arrParameter[1] == 1) ? 'true' : $arrParameter[1]) . ",\n"; ?>
 			<?php endforeach; endif; ?>
 			<?php if ($this->fullsize): ?>
 			onClick: function(el) { <?php echo $this->slimbox ? 'Slimbox.open' : 'Lightbox.show'; ?>(this.getAttribute('longdesc'), this.getAttribute('alt')); }

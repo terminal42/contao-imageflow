@@ -220,18 +220,12 @@ class ContentImageFlow extends ContentElement
 		$this->Template->lightboxId = 'lb' . $this->id;
 		$this->Template->images = $arrImages;
 
-		$this->Template->preloadImages = $this->ifPreload ? 'true' : 'false';
 		$this->Template->reflections = $this->ifReflections ? 'true' : 'false';
 		$this->Template->reflectionP = $this->ifReflectionP;
 		$this->Template->reflectionPNG = $this->ifReflectionPNG ? 'true' : 'false';
 		$this->Template->reflectionGET = '&amp;bgc='.(strlen($this->ifBgColor) ? $this->ifBgColor : '000000').$strGetParameters;
 		$this->Template->imageFocusMax = $this->ifImageFocusMax;
 		$this->Template->startID = $this->ifStartID;
-		$this->Template->startAnimation = $this->ifStartAnimation ? 'true' : 'false';
-		$this->Template->slider = $this->ifSlider ? 'true' : 'false';
-		$this->Template->buttons = $this->ifButtons ? 'true' : 'false';
-		$this->Template->captions = $this->ifCaptions ? 'true' : 'false';
-		$this->Template->opacity = $this->ifOpacity ? 'true' : 'false';
 		$this->Template->fullsize = $this->fullsize;
 		$this->Template->parameters = false;
 		$this->Template->slimbox = version_compare(VERSION, '2.7', '>=') ? true : false;
@@ -242,8 +236,31 @@ class ContentImageFlow extends ContentElement
 		
 
 		// Pass ImageFlow parameters
+		$arrParameters = array();
 		$arrParameters = deserialize($this->ifParameters);
-		if (is_array($arrParameters) && strlen($arrParameters[0][0]))
+
+		if(is_array($arrParameters) && count($arrParameters))
+		{
+			foreach($arrParameters as $k => $v)
+			{
+				if(!strlen($v[0]))
+				{
+					unset($arrParameters[$k]);
+				}
+			}
+		}		
+		
+		$arrConfigBlob = deserialize($this->ifConfigBlob);
+		
+		if(is_array($arrConfigBlob) && count($arrConfigBlob))
+		{
+			foreach($arrConfigBlob as $v)
+			{
+				$arrParameters[] = array($v, 1);
+			}
+		}
+		
+		if (is_array($arrParameters) && count($arrParameters))
 		{
 			$this->Template->parameters = $arrParameters;
 		}

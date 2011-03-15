@@ -29,22 +29,17 @@
 /**
  * Fields
  */
-$GLOBALS['TL_LANG']['tl_content']['ifPreload']			= array('Bilder vorladen', 'Klicken Sie hier wenn alle Bilder vor dem anzeigen geladen werden sollen.');
 $GLOBALS['TL_LANG']['tl_content']['ifReflections']		= array('Spiegelung aktivieren', '<a href="http://finnrudolph.de/ImageFlow/Examples#No_reflections" onclick="window.open(this.href); return false">Klicken Sie hier wenn die Bilder gespiegelt werden sollen.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifReflectionP']		= array('Höhe der Spiegelung', '<a href="http://finnrudolph.de/ImageFlow/Examples#Image_alignment" onclick="window.open(this.href); return false">Höhe der Spiegelung in % des Originalbildes (1.0 = 100%, 0 = 0%).</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifReflectionPNG']	= array('PNG für Transparenz benutzen', '<a href="http://finnrudolph.de/ImageFlow/Examples#Transparent_reflections" onclick="window.open(this.href); return false">Verwendet reflect3.php anstelle von reflect2.php um PNG-Transparenz zu benutzen.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifImageFocusMax']	= array('Anzahl Bilder auf jeder Seite', '<a href="http://finnrudolph.de/ImageFlow/Examples#imageFocusMax" onclick="window.open(this.href); return false">Maximale Anzahl Bilder auf jeder Seite des fokussierten Bildes.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifStartID']			= array('Startbild', '<a href="http://finnrudolph.de/ImageFlow/Examples#startID" onclick="window.open(this.href); return false">Beim starten zu diesem Bild gleiten.</a>');
-$GLOBALS['TL_LANG']['tl_content']['ifStartAnimation']	= array('Start-Animation zeigen', '<a href="http://finnrudolph.de/ImageFlow/Examples#startAnimation" onclick="window.open(this.href); return false">Beim starten werden die Bilder von rechts eingeblendet.</a>');
-$GLOBALS['TL_LANG']['tl_content']['ifSlider']			= array('Schieber anzeigen', '<a href="http://finnrudolph.de/ImageFlow/Examples#No_reflections_no_scrollbar" onclick="window.open(this.href); return false">Klicken Sie hier wenn die Scrollbar angezeigt werden soll.</a>');
-$GLOBALS['TL_LANG']['tl_content']['ifButtons']			= array('Buttons anzeigen', '<a href="http://finnrudolph.de/ImageFlow/Examples#Enable_navigation_buttons" onclick="window.open(this.href); return false">Klicken Sie hier wenn die Scrollbar-Buttons angezeigt werden sollen.</a>');
-$GLOBALS['TL_LANG']['tl_content']['ifCaptions']			= array('Bildunterschriften anzeigen', '<a href="http://finnrudolph.de/ImageFlow/Examples#No_reflections_no_scrollbar_no_captions" onclick="window.open(this.href); return false">Klicken Sie hier wenn Bildunterschriften angezeigt werden sollen.</a>');
-$GLOBALS['TL_LANG']['tl_content']['ifOpacity']			= array('Bilder transparent zeigen', '<a href="http://finnrudolph.de/ImageFlow/Examples#Enable_image_opacity" onclick="window.open(this.href); return false">Klicken Sie hier wenn Bilder links und rechts transparent angezeigt werden sollen.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifBgColor']			= array('Hintergrundfarbe der Spiegelung', 'Wählen Sie die Hintergrundfarbe für die Spiegelung entsprechend der Website für beste Resultate.');
 $GLOBALS['TL_LANG']['tl_content']['ifGetParameters']	= array('Parameter für Spiegelungs-Script', '<a href="http://finnrudolph.de/ImageFlow/Examples#Reflection_background_color" onclick="window.open(this.href); return false">Sie können dem Spiegelungs-Script zusätzliche Parameter übergeben.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifParameters']		= array('Parameter für ImageFlow-Script', '<a href="http://finnrudolph.de/ImageFlow/Documentation" onclick="window.open(this.href); return false;">Sie können ImageFlow zusätzliche Parameter übergeben.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifLicense']			= array('ImageFlow Lizenz', '');
 $GLOBALS['TL_LANG']['tl_content']['ifAnimationSpeed']	= array('Animations-Geschwindigkeit', 'Geben Sie die gewünschte Animationszeit in ms ein.');
+$GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']		= array('Einstellungen', 'Wählen Sie die gewünschten Einstellungen aus.');
 
 
 /**
@@ -57,5 +52,11 @@ $GLOBALS['TL_LANG']['tl_content']['ifReflections_legend']	= 'Bildspiegelung';
 /**
  * References
  */
-$GLOBALS['TL_LANG']['tl_content']['ifGetParameters_ref'] = array('Schlüssel', 'Wert');
+$GLOBALS['TL_LANG']['tl_content']['ifGetParameters_ref']				= array('Schlüssel', 'Wert');
+$GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['preloadImages']		= 'Bilder vorladen';
+$GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['startAnimation']		= 'Start-Animation zeigen';
+$GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['slider']				= 'Schieber anzeigen';
+$GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['buttons']			= 'Buttons anzeigen';
+$GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['captions']			= 'Bildunterschriften anzeigen';
+$GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['opacity']			= 'Bilder transparent zeigen';
 
