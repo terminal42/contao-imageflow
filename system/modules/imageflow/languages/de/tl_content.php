@@ -58,6 +58,7 @@ $GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['slider']				= 'Schieber anzei
 $GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['buttons']			= 'Buttons anzeigen';
 $GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['captions']			= 'Bildunterschriften anzeigen';
 $GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['opacity']			= 'Bilder transparent zeigen';
+$GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['circular']			= 'Zirkuläre Rotation aktivieren';
 $GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.1']				= '10%';
 $GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.2']				= '20%';
 $GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.3']				= '30%';

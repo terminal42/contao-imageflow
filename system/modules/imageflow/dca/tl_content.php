@@ -140,7 +140,8 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifConfigBlob'] = array
 		'slider',
 		'buttons',
 		'captions',
-		'opacity'	
+		'opacity',
+		'circular'	
 	),
 	'reference'			=> &$GLOBALS['TL_LANG']['tl_content']['ifConfigBlob'],
 	'eval'				=> array('multiple'=>true)

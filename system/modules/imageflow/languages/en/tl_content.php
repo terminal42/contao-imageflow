@@ -58,6 +58,7 @@ $GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['slider']				= 'Show slider';
 $GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['buttons']			= 'Show buttons';
 $GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['captions']			= 'Show image captions';
 $GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['opacity']			= 'Enable image opacity';
+$GLOBALS['TL_LANG']['tl_content']['ifConfigBlob']['circular']			= 'Enable circular rotation';
 $GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.1']				= '10%';
 $GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.2']				= '20%';
 $GLOBALS['TL_LANG']['tl_content']['ifReflectionP']['0.3']				= '30%';
