@@ -213,14 +213,14 @@ class ContentImageFlow extends ContentElement
 		$this->Template->fullsize = $this->fullsize;
 		$this->Template->parameters = false;
 		$this->Template->slimbox = version_compare(VERSION, '2.7', '>=') ? true : false;
-		$this->Template->reflectPath = $this->Environment->base . 'plugins/imageflow/';
+		$this->Template->reflectPath = 'plugins/imageflow/';
+		$this->Template->imagePath = '../../';
 		$this->Template->animationSpeed = is_numeric($this->ifAnimationSpeed) ? $this->ifAnimationSpeed : 50;
-		
+
 		// slideshow
 		$this->Template->slideshow = ($this->ifAddSlideShow) ? 'true' : 'false';
-		$this->Template->slideshowSpeed = $this->ifSlideShowSpeed;
+		$this->Template->slideshowSpeed = $this->ifSlideShowSpeed ? $this->ifSlideShowSpeed : 1500;
 		$this->Template->slideshowAutoplay = ($this->ifSlideShowAutoPlay) ? 'true' : 'false';
-		
 
 		// Pass ImageFlow parameters
 		$arrParameters = array();

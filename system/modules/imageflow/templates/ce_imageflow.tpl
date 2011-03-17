@@ -17,6 +17,7 @@
 	{
 		new ImageFlow().init({ 
 			ImageFlowID: '<?php echo $this->divId; ?>',
+			imagePath: '<?php echo $this->imagePath; ?>',
 			reflectPath: '<?php echo $this->reflectPath; ?>',
 			reflections: <?php echo $this->reflections; ?>,
 			reflectionP: <?php echo $this->reflectionP; ?>,
@@ -28,17 +29,17 @@
 			slideshowAutoplay: <?php echo $this->slideshowAutoplay; ?>,
 			startID: <?php echo $this->startID; ?>,
 			animationSpeed: <?php echo $this->animationSpeed; ?>,
-			<?php if ($this->parameters): foreach( $this->parameters as $arrParameter): ?>
+<?php if ($this->parameters): foreach( $this->parameters as $arrParameter): ?>
 			<?php echo $arrParameter[0] . ': ' . (($arrParameter[1] == 1) ? 'true' : $arrParameter[1]) . ",\n"; ?>
-			<?php endforeach; endif; ?>
-			<?php if ($this->fullsize): ?>
+<?php endforeach; endif; ?>
+<?php if ($this->fullsize): ?>
 			onClick: function(el) { <?php echo $this->slimbox ? 'Slimbox.open' : 'Lightbox.show'; ?>(this.getAttribute('longdesc'), this.getAttribute('alt')); }
-			<?php else: ?>onClick: function() { window.open(this.getAttribute('longdesc')); }<?php endif; ?>
-			
+<?php else: ?>
+			onClick: function() { window.open(this.getAttribute('longdesc')); }
+<?php endif; ?>
 		});
 	});
 //--><!]]>
 </script>
 
 </div>
-
