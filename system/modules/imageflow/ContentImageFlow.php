@@ -70,12 +70,6 @@ class ContentImageFlow extends ContentElement
 
 	protected function compile()
 	{
-		if (version_compare(VERSION.'.'.BUILD, '2.7.6', '>'))
-		{
-			$GLOBALS['TL_CSS'][] = 'plugins/slimbox/css/slimbox.css';
-			$GLOBALS['TL_JAVASCRIPT'][] = 'plugins/slimbox/js/slimbox.js';
-		}
-
 		$GLOBALS['TL_CSS'][] = 'plugins/imageflow/imageflow.css';
 		$GLOBALS['TL_JAVASCRIPT'][] = 'plugins/imageflow/imageflow.js';
 
@@ -212,7 +206,6 @@ class ContentImageFlow extends ContentElement
 		$this->Template->startID = $this->ifStartID;
 		$this->Template->fullsize = $this->fullsize;
 		$this->Template->parameters = false;
-		$this->Template->slimbox = version_compare(VERSION, '2.7', '>=') ? true : false;
 		$this->Template->reflectPath = 'plugins/imageflow/';
 		$this->Template->imagePath = '../../';
 		$this->Template->animationSpeed = is_numeric($this->ifAnimationSpeed) ? $this->ifAnimationSpeed : 50;

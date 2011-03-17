@@ -97,6 +97,7 @@ function ImageFlow ()
 		{
 			/* Set it global within the ImageFlow scope */
 			ImageFlowDiv.style.visibility = 'visible';
+			ImageFlowDiv.className = 'imageflow';
 			this.ImageFlowDiv = ImageFlowDiv;
 
 			/* Try to create XHTML structure */

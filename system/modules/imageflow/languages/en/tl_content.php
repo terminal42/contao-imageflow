@@ -30,7 +30,7 @@
  * Fields
  */
 $GLOBALS['TL_LANG']['tl_content']['ifReflections']			= array('Reflection', 'Choose the image reflection type. <a href="http://finnrudolph.de/ImageFlow/Examples#No_reflections" onclick="window.open(this.href); return false">See here for an example</a>.');
-$GLOBALS['TL_LANG']['tl_content']['ifReflectionP']			= array('Reflection height', 'Height of the reflection in % of the source image. <a href="http://finnrudolph.de/ImageFlow/Examples#Image_alignment" onclick="window.open(this.href); return false">See here for an example</a>.');
+$GLOBALS['TL_LANG']['tl_content']['ifReflectionP']			= array('Reflection height', '<a href="http://finnrudolph.de/ImageFlow/Examples#Image_alignment" onclick="window.open(this.href); return false">Height of the reflection in % of the source image.</a> This also affects the slider position, if enabled.');
 $GLOBALS['TL_LANG']['tl_content']['ifImageFocusMax']		= array('Images on each side', 'Maximum number of images on each side of the focussed one. <a href="http://finnrudolph.de/ImageFlow/Examples#imageFocusMax" onclick="window.open(this.href); return false">See here for an example</a>.');
 $GLOBALS['TL_LANG']['tl_content']['ifStartID']				= array('Start image', 'Glide to this image number on startup. <a href="http://finnrudolph.de/ImageFlow/Examples#startID" onclick="window.open(this.href); return false">See here for an example</a>.');
 $GLOBALS['TL_LANG']['tl_content']['ifBgColor']				= array('Reflection background color', 'Set the reflection background color to your website\'s background for best results.');

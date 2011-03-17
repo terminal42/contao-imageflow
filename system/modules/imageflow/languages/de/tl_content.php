@@ -30,7 +30,7 @@
  * Fields
  */
 $GLOBALS['TL_LANG']['tl_content']['ifReflections']			= array('Spiegelung', '<a href="http://finnrudolph.de/ImageFlow/Examples#No_reflections" onclick="window.open(this.href); return false">Wählen Sie aus, wie die Bilder gespiegelt werden sollen.</a>');
-$GLOBALS['TL_LANG']['tl_content']['ifReflectionP']			= array('Höhe der Spiegelung', '<a href="http://finnrudolph.de/ImageFlow/Examples#Image_alignment" onclick="window.open(this.href); return false">Höhe der Spiegelung in % des Originalbildes</a>');
+$GLOBALS['TL_LANG']['tl_content']['ifReflectionP']			= array('Höhe der Spiegelung', '<a href="http://finnrudolph.de/ImageFlow/Examples#Image_alignment" onclick="window.open(this.href); return false">Höhe der Spiegelung in % des Originalbildes.</a> Dies bestimmt auch die Position des Schiebers, falls dieser aktiviert ist.');
 $GLOBALS['TL_LANG']['tl_content']['ifImageFocusMax']		= array('Anzahl Bilder auf jeder Seite', '<a href="http://finnrudolph.de/ImageFlow/Examples#imageFocusMax" onclick="window.open(this.href); return false">Maximale Anzahl Bilder auf jeder Seite des fokussierten Bildes.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifStartID']				= array('Startbild', '<a href="http://finnrudolph.de/ImageFlow/Examples#startID" onclick="window.open(this.href); return false">Beim starten zu diesem Bild gleiten.</a>');
 $GLOBALS['TL_LANG']['tl_content']['ifBgColor']				= array('Hintergrundfarbe der Spiegelung', 'Wählen Sie die Hintergrundfarbe für die Spiegelung entsprechend der Website für beste Resultate.');

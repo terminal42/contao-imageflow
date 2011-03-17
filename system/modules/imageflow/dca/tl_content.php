@@ -41,7 +41,7 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['imageflow'] = '{type_legend},type,
 /**
  * Subpalettes
  */
-$GLOBALS['TL_DCA']['tl_content']['subpalettes']['ifReflections_none'] = '';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['ifReflections_none'] = 'ifReflectionP';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['ifReflections_png'] = 'ifReflectionP';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['ifReflections_jpeg'] = 'ifReflectionP,ifBgColor';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['ifAddSlideShow'] = 'ifSlideShowSpeed,ifSlideShowAutoPlay';
@@ -147,18 +147,9 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifConfigBlob'] = array
 (
 	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['ifConfigBlob'],
 	'exclude'			=> true,
+	'default'			=> array('preloadImages', 'startAnimation', 'slider', 'buttons'),
 	'inputType'			=> 'checkbox',
-	'options'			=> array
-	(
-		'preloadImages',
-		'startAnimation',
-		'slider',
-		'buttons',
-		'captions',
-		'opacity',
-		'circular',
-		'glideToStartID'
-	),
+	'options'			=> array('preloadImages', 'startAnimation', 'slider', 'buttons', 'captions', 'opacity', 'circular', 'glideToStartID'),
 	'reference'			=> &$GLOBALS['TL_LANG']['tl_content']['ifConfigBlob'],
 	'eval'				=> array('multiple'=>true)
 );
