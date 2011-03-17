@@ -152,7 +152,7 @@ function ImageFlow ()
 				{
 					version = (my.reflectionPNG) ? '3' : '2';
 					src = my.imagePath+node.getAttribute('src',2);
-					src = my.reflectPath+'reflect'+version+'.php?img='+src+my.reflectionGET;
+					src = my.reflectPath+'reflect'+version+'.php?img='+src+my.reflectionGET.split('&amp;').join('&');
 					node.setAttribute('src',src);
 				}
 

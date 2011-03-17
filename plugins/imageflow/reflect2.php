@@ -44,64 +44,7 @@
 	}
 	
 	//	Our allowed query string parameters
-
-    //  To cache or not to cache? that is the question
-    if (isset($_GET['cache']))
-    {
-        if ((int) $_GET['cache'] == 1)
-        {
-            $cache = true;
-        }
-        else
-        {
-            $cache = false;
-        }
-    }
-    else
-    {
-        $cache = true;
-    }
-
-	//	img (the image to reflect)
-	if (isset($_GET['img']))
-	{
-		$source_image = $_GET['img'];
-
-		//$source_image = utf8_decode($source_image);
-
-		$source_image = str_replace('://','',$source_image);
-		//$source_image = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . $source_image;
-        
-        if (file_exists($source_image))
-        {
-            if ($cache)
-            {
-                $cache_dir = '../../system/html';
-                $cache_file = md5('refl2_' . str_replace('../../', '', $source_image));
-                $cache_path = $cache_dir . DIRECTORY_SEPARATOR . $cache_file;
-
-                if (file_exists($cache_path) && filemtime($cache_path) >= filemtime($source_image))
-                {
-                    // Use cached image
-                    $image_info = getimagesize($cache_path);
-                    header("Content-type: " . $image_info['mime']);
-                    readfile($cache_path);
-                    exit();
-                }
-            }
-        }
-        else
-        {
-          echo 'Cannot find or read source image';
-          exit();
-        }
-	}
-	else
-	{
-		echo 'No source image to reflect supplied';
-		exit();
-	}
-
+	
 	//	bgc (the background colour used, defaults to black if not given)
 	if (isset($_GET['bgc']) == false)
 	{
@@ -140,6 +83,63 @@
 				$green = 0;
 				$blue = 0;
 		}
+	}
+
+    //  To cache or not to cache? that is the question
+    if (isset($_GET['cache']))
+    {
+        if ((int) $_GET['cache'] == 1)
+        {
+            $cache = true;
+        }
+        else
+        {
+            $cache = false;
+        }
+    }
+    else
+    {
+        $cache = true;
+    }
+
+	//	img (the image to reflect)
+	if (isset($_GET['img']))
+	{
+		$source_image = $_GET['img'];
+
+		//$source_image = utf8_decode($source_image);
+
+		$source_image = str_replace('://','',$source_image);
+		//$source_image = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . $source_image;
+        
+        if (file_exists($source_image))
+        {
+            if ($cache)
+            {
+                $cache_dir = '../../system/html';
+                $cache_file = md5('refl2_' . str_replace('../../', '', $source_image) . '_' .$red.$green.$blue);
+                $cache_path = $cache_dir . DIRECTORY_SEPARATOR . $cache_file;
+
+                if (file_exists($cache_path) && filemtime($cache_path) >= filemtime($source_image))
+                {
+                    // Use cached image
+                    $image_info = getimagesize($cache_path);
+                    header("Content-type: " . $image_info['mime']);
+                    readfile($cache_path);
+                    exit();
+                }
+            }
+        }
+        else
+        {
+          echo 'Cannot find or read source image';
+          exit();
+        }
+	}
+	else
+	{
+		echo 'No source image to reflect supplied';
+		exit();
 	}
 	
 	//	height (how tall should the reflection be?)
