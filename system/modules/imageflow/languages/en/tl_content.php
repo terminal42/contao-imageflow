@@ -46,6 +46,7 @@ $GLOBALS['TL_LANG']['tl_content']['ifSlideShowAutoPlay']	= array('Autoplay', 'En
 /**
  * Legends
  */
+$GLOBALS['TL_LANG']['tl_content']['license_legend']			= 'License';
 $GLOBALS['TL_LANG']['tl_content']['ifSettings_legend']		= 'ImageFlow Settings';
 $GLOBALS['TL_LANG']['tl_content']['ifReflections_legend']	= 'Image reflections';
 $GLOBALS['TL_LANG']['tl_content']['ifSlideShow_legend']		= 'Slideshow';

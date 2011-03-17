@@ -35,7 +35,7 @@ $GLOBALS['TL_CSS'][] = 'system/modules/imageflow/html/style_be.css';
  */
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'ifReflections';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'ifAddSlideShow';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['imageflow'] = '{type_legend},type,headline;ifLicense;{source_legend},multiSRC,useHomeDir;{image_legend},sortBy,fullsize,ifImageFocusMax,ifStartID,ifAnimationSpeed,ifConfigBlob,ifParameters;{ifSettings_legend},ifPreload,ifStartAnimation,ifSlider,ifButtons,ifCaptions,ifOpacity;{ifReflections_legend},ifReflections;{ifSlideShow_legend},ifAddSlideShow;{protected_legend:hide},protected;{expert_legend:hide},guests,align,space,cssID';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['imageflow'] = '{type_legend},type,headline;{license_legend},ifLicense;{source_legend},multiSRC,useHomeDir;{image_legend},sortBy,fullsize,ifImageFocusMax,ifStartID,ifAnimationSpeed,ifConfigBlob,ifParameters;{ifReflections_legend},ifReflections;{ifSlideShow_legend},ifAddSlideShow;{protected_legend:hide},protected;{expert_legend:hide},guests,align,space,cssID';
 
 
 /**
