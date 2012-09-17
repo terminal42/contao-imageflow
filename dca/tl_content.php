@@ -28,7 +28,7 @@
 
 
 $this->loadDataContainer('tl_style');
-$GLOBALS['TL_CSS'][] = 'system/modules/imageflow/html/style_be.css';
+$GLOBALS['TL_CSS'][] = 'system/modules/imageflow/assets/style_be.css';
 
 
 /**
