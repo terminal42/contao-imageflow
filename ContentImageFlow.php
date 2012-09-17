@@ -10,12 +10,12 @@
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation, either
  * version 3 of the License, or (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General Public
  * License along with this program. If not, please visit the Free
  * Software Foundation website at <http://www.gnu.org/licenses/>.
@@ -72,8 +72,8 @@ class ContentImageFlow extends ContentElement
 
 	protected function compile()
 	{
-		$GLOBALS['TL_CSS'][] = 'plugins/imageflow/imageflow.css';
-		$GLOBALS['TL_JAVASCRIPT'][] = 'plugins/imageflow/imageflow.js';
+		$GLOBALS['TL_CSS'][] = 'system/modules/imageflow/assets/imageflow.css';
+		$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/imageflow/assets/imageflow.js';
 
 		$images = array();
 		$auxDate = array();
@@ -169,7 +169,7 @@ class ContentImageFlow extends ContentElement
 				}
 				$images = $arrImages;
 				break;
-				
+
 			case 'random':
 				shuffle($images);
 				break;
@@ -230,7 +230,7 @@ class ContentImageFlow extends ContentElement
 				{
 					unset($arrParameters[$k]);
 				}
-				
+
 				if($v[0] == 'reflectionGET')
 				{
 					$strGetParameters = $v[1];
@@ -239,20 +239,20 @@ class ContentImageFlow extends ContentElement
 			}
 		}
 
-		$this->Template->reflectionGET = '&amp;bgc='.(strlen($this->ifBgColor) ? $this->ifBgColor : '000000') . specialchars($strGetParameters);	
-		
+		$this->Template->reflectionGET = '&amp;bgc='.(strlen($this->ifBgColor) ? $this->ifBgColor : '000000') . specialchars($strGetParameters);
+
 		$arrConfigBlob = deserialize($this->ifConfigBlob);
-		
+
 		// make sure $arrConfigBlob is not empty
 		if(!(is_array($arrConfigBlob) && count($arrConfigBlob)))
 		{
 			$arrConfigBlob[] = '';
 		}
-		
+
 		// we need to set the values that are false here too
 		$this->loadDataContainer('tl_content');
 		$arrAllConfigValues = $GLOBALS['TL_DCA']['tl_content']['fields']['ifConfigBlob']['options'];
-		
+
 		foreach($arrAllConfigValues as $conf)
 		{
 			if(in_array($conf, $arrConfigBlob))
@@ -264,7 +264,7 @@ class ContentImageFlow extends ContentElement
 				$arrParameters[] = array($conf, 'false');
 			}
 		}
-		
+
 		if (is_array($arrParameters) && count($arrParameters))
 		{
 			$this->Template->parameters = $arrParameters;
