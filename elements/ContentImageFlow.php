@@ -300,14 +300,14 @@ class ContentImageFlow extends \ContentElement
         {
             foreach($arrParameters as $k => $v)
             {
-                if(!strlen($v[0]))
+                if(!strlen($v['ifp_key']))
                 {
                     unset($arrParameters[$k]);
                 }
 
-                if($v[0] == 'reflectionGET')
+                if($v['ifp_key'] == 'reflectionGET')
                 {
-                    $strGetParameters = $v[1];
+                    $strGetParameters = $v['ifp_value'];
                     unset($arrParameters[$k]);
                 }
             }

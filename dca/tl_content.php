@@ -119,20 +119,22 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifParameters'] = array
 (
 	'label'				=> &$GLOBALS['TL_LANG']['tl_content']['ifParameters'],
 	'exclude'			=> true,
-	'inputType'			=> 'multitextWizard',
+	'inputType'			=> 'multiColumnWizard',
 	'eval'				=> array
 	(
-		'style'=>'width:100%;',
-		'columns' => array
+		'columnFields' => array
 		(
-			array
+			'ifp_key' => array
 			(
 				'label' => &$GLOBALS['TL_LANG']['tl_content']['ifParameters']['key'],
-				'width' => '20%'
+				'inputType' => 'text',
+				'eval' => array('style'=>'width:200px;')
 			),
-			array
+			'ifp_value' => array
 			(
-				'label' => &$GLOBALS['TL_LANG']['tl_content']['ifParameters']['value']
+				'label' => &$GLOBALS['TL_LANG']['tl_content']['ifParameters']['value'],
+				'inputType' => 'text',
+				'eval' => array('style'=>'width:400px;')
 			)
 		)
 	),
