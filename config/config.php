@@ -15,3 +15,8 @@
  */
 $GLOBALS['TL_CTE']['images']['imageflow'] = 'ContentImageFlow';
 
+
+/**
+ * Add back end form fields
+ */
+$GLOBALS['BE_FFL']['imageflow_license'] = 'ImageflowLicenseWidget';

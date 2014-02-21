@@ -128,7 +128,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['ifLicense'] = array
 (
     'label'                => &$GLOBALS['TL_LANG']['tl_content']['ifLicense'],
     'exclude'            => true,
-    'inputType'            => 'license',
+    'inputType'            => 'imageflow_license',
     'eval'                => array('submitOnChange'=>true, 'license'=>&$GLOBALS['TL_LANG']['MSC']['imageflow_license'], 'doNotShow'=>true, 'doNotCopy'=>true, 'tl_class'=>'long'),
     'sql'               => "char(1) NOT NULL default ''"
 );

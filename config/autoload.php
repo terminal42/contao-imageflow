@@ -15,6 +15,7 @@
 ClassLoader::addClasses(array
 (
     'Contao\ContentImageFlow' => 'system/modules/imageflow/elements/ContentImageFlow.php',
+    'Contao\ImageflowLicenseWidget' => 'system/modules/imageflow/widgets/ImageflowLicenseWidget.php',
 ));
 
 
